@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="#F3E5F5"
+    tools:context=".RatingFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate a Dish"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Dish Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dish Name">
+
+        <EditText
+            android:id="@+id/et_dish_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Dish Type Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Dish Type:"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+
+    <Spinner
+        android:id="@+id/spinner_dish_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/dish_types_array"
+        android:padding="8dp"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Rating Bar -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating (1 to 5 Stars):"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"/>
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="3.0"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btn_submit_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Rating"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Result Display TextView -->
+    <TextView
+        android:id="@+id/tv_result_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rating result."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="#D1C4E9"/>
+
+</LinearLayout>

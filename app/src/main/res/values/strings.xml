@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RestaurantRaterApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- String Array required by DishRatingFragment for the Spinner -->
+    <string-array name="dish_types_array">
+        <item>Starter</item>
+        <item>Main</item>
+        <item>Dessert</item>
+        <item>Beverage</item>
+        <item>Side Dish</item>
+    </string-array>
+</resources>
